@@ -3,5 +3,5 @@ const {createCustomer,fetchCustomer,updateCustomer} = require("../controller/cus
 const router = express.Router();
 router.post("/create",createCustomer);
 router.get("/fetch",fetchCustomer);
-router.post("/update/:id",updateCustomer);
+router.post("/update",updateCustomer);
 module.exports = router;

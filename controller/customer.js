@@ -36,9 +36,9 @@ const fetchCustomer = async(req,res)=>{
     }
 }
 const updateCustomer = async(req,res)=>{
-     const {id} = req.params;
+     
     try {
-       const data = await model.findByIdAndUpdate(id, req.body, { new: true });
+       const data = await model.findByIdAndUpdate(req.body.id, req.body, { new: true });
     res.status(200).json({error: false,customer: data});
 
     } catch (error) {
