@@ -7,6 +7,7 @@ app.use(express.json());
 const connectToMongo = require('./db');
 
 app.use("/api/customer",require("./router/customer"));
+app.use("/api/rider",require("./router/rider"));
 
 app.listen(process.env.PORT,()=>{
     console.log("Server is connected with",process.env.PORT);
